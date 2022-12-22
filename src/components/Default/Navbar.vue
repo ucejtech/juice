@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :id="`header${id}`">
     <div class="content">
       <div class="logo">
         <JuiceLogo />
@@ -18,10 +18,12 @@
 
 <script>
 import JuiceLogo from '@/assets/img/Juice-Full.svg';
+import { generateRandomElementId } from '@/utils';
 
 export default {
   data() {
     return {
+      id: generateRandomElementId(),
       navLinks: [
         {
           title: 'Documentation',
@@ -44,19 +46,23 @@ export default {
   },
   components: {
     JuiceLogo
-  }
+  },
+  mounted() {
+    // const
+  },
+  methods: {}
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
-  @apply px-4 py-6 font-roobert z-10 relative;
+  @apply px-4 py-6 font-roobert sticky top-0 z-10;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.5) 0%,
     rgba(255, 255, 255, 0.25) 100%
   );
-  // backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 
   .content {
     @apply flex justify-between items-center;
@@ -68,7 +74,7 @@ export default {
     @apply flex gap-12 text-base;
 
     .route {
-      @apply hover:text-purple;
+      @apply hover:bg-purple-600;
     }
   }
 }

@@ -25,7 +25,7 @@ export default {
   border-radius: v-bind(radius);
 
   &__purple {
-    @apply bg-purple;
+    @apply bg-purple-600;
   }
   &__black {
     @apply bg-black;

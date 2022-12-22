@@ -4,7 +4,7 @@
       <h2>
         Accept and process payments in a secure and scalable way
       </h2>
-      <Well color="#ffffff" class="settlements">
+      <BaseWell color="#ffffff" class="settlements">
         <h3>
           Speedy Settlements
         </h3>
@@ -14,8 +14,8 @@
           time and effort with effective scheme management, and timely
           settlement.
         </p>
-      </Well>
-      <Well class="mt-6 p-10 pb-0">
+      </BaseWell>
+      <BaseWell class="mt-6 p-10 pb-0">
         <h3 class="text-white">You’re in control</h3>
         <div class="flex gap-6 text-white mt-4 tracking-0.37px font-light">
           <p class="flex-1">
@@ -34,9 +34,9 @@
           class="mt-8"
           data-aos="fade-up"
         />
-      </Well>
+      </BaseWell>
       <div class="flex gap-6 mt-6 font-light">
-        <Well class="p-10 flex-1" color="#ffffff">
+        <BaseWell class="p-10 flex-1" color="#ffffff">
           <img src="@/assets/img/shield.png" alt="Shield" width="88px" />
           <h3 class="mt-6">
             Security enabled
@@ -46,8 +46,8 @@
             protection without sacrificing user experience. Accrue way less in
             operational expenses associated with fraud investigations.
           </p>
-        </Well>
-        <Well class="p-10 flex-1" color="#ffffff">
+        </BaseWell>
+        <BaseWell class="p-10 flex-1" color="#ffffff">
           <img src="@/assets/img/hand-currency.png" alt="Shield" width="88px" />
           <h3 class="mt-6">Great pricing</h3>
           <p class="mt-4 text-lg">
@@ -55,9 +55,9 @@
             frequencies, Juice charges a flat fee per transaction. No percentage
             or any surprise monthly fees.
           </p>
-        </Well>
+        </BaseWell>
       </div>
-      <Well class="mt-6 p-10" color="black">
+      <BaseWell class="mt-6 p-10" color="black">
         <h3 class="text-white max-w-400px">
           $50 for for all payin and payout transactions
         </h3>
@@ -91,25 +91,20 @@
             </span>
           </p>
         </div>
-      </Well>
+      </BaseWell>
     </div>
   </section>
 </template>
 
 <script>
-import Well from '../../misc/Well.vue';
-export default {
-  components: {
-    Well
-  }
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
 .process-section {
   .content {
     @apply my-0 mx-auto;
-    max-width: 1002px;
+    max-width: $contentMaxWidth;
 
     h2 {
       @apply max-w-489px;

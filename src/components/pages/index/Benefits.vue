@@ -2,9 +2,9 @@
   <section class="benefits">
     <div class="content">
       <h2>Benefits</h2>
-      <p class="text-lg text-gray-700 mt-6">Why Juice</p>
+      <p class="text-lg text-gray-700 mt-6 font-light">Why Juice</p>
       <div class="mt-10 grid grid-cols-2 gap-6">
-        <Well
+        <BaseWell
           class="p-10 flex-1"
           color="#ffffff"
           v-for="(benefit, index) in benefits"
@@ -17,9 +17,9 @@
           <p class="mt-4 text-lg font-light">
             {{ benefit.description }}
           </p>
-        </Well>
+        </BaseWell>
       </div>
-      <Well color="black" class="mt-6 p-10 text-white">
+      <BaseWell color="black" class="mt-6 p-10 text-white">
         <div class="grid grid-cols-3">
           <div class="max-w-220px">
             <p class="value text-3xl font-bold">+70</p>
@@ -43,7 +43,7 @@
         <div class="uppercase text-xs text-gray-300 font-light mt-8">
           all bragging rights unreserved.*
         </div>
-      </Well>
+      </BaseWell>
     </div>
   </section>
 </template>
@@ -55,7 +55,6 @@ import handCurrencyImage from '@/assets/img/hand-currency.png';
 import mapImage from '@/assets/img/map.png';
 import shieldImage from '@/assets/img/shield.png';
 import walletCardImage from '@/assets/img/wallet-card.png';
-import Well from '../../misc/Well.vue';
 
 const benefits = [
   {
@@ -96,7 +95,6 @@ const benefits = [
   }
 ];
 export default {
-  components: { Well },
   data() {
     return {
       benefits
@@ -110,7 +108,7 @@ export default {
   @apply py-16;
   .content {
     @apply my-0 mx-auto;
-    max-width: 1002px;
+    max-width: $contentMaxWidth;
   }
 }
 </style>

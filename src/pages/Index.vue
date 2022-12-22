@@ -4,6 +4,8 @@
     <Process />
     <Documentation class="mt-16" />
     <Benefits />
+    <Solutions />
+    <Guidance class="mt-16" />
   </Layout>
 </template>
 
@@ -12,6 +14,8 @@ import Hero from '../components/pages/index/Hero.vue';
 import Process from '../components/pages/index/Process.vue';
 import Benefits from '../components/pages/index/Benefits.vue';
 import Documentation from '../components/pages/Documentation.vue';
+import Guidance from '../components/pages/Guidance.vue';
+import Solutions from '../components/pages/index/Solutions.vue';
 
 export default {
   metaInfo() {
@@ -23,7 +27,9 @@ export default {
     Benefits,
     Hero,
     Process,
-    Documentation
+    Documentation,
+    Guidance,
+    Solutions
   }
 };
 </script>

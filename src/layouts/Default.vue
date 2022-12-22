@@ -1,14 +1,18 @@
 <template>
   <div class="layout">
-    <navbar />
+    <Navbar />
     <slot />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from '../components/Default/Navbar';
+import Footer from '../components/Default/Footer';
+
 export default {
   components: {
+    Footer,
     Navbar
   }
 };

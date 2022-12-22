@@ -39,7 +39,10 @@ export default {
       colors: {
         black: '#111111',
         white: '#F8F8F8',
-        purple: '#5D57F6'
+        purple: {
+          300: '#D2C3F2',
+          600: '#5D57F6'
+        }
       }
     }
   }

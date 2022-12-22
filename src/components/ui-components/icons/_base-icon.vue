@@ -43,10 +43,4 @@ export default {
 
   @apply flex justify-center items-center;
 }
-
-// ::v-deep(svg) {
-//   width: 100%;
-//   height: 100%;
-//   overflow: visible;
-// }
 </style>
