@@ -1,5 +1,5 @@
 <template>
-  <header class="header animate-animated " :id="`header${id}`">
+  <header class="header animate-animated " :id="`app-header`">
     <div class="content">
       <div class="logo">
         <JuiceLogo />
@@ -24,7 +24,6 @@ export default {
   data() {
     return {
       id: generateRandomElementId(),
-      navElement: null,
       navLinks: [
         {
           title: 'Documentation',
@@ -49,9 +48,16 @@ export default {
     JuiceLogo
   },
   mounted() {
-    this.navElement = document.getElementById(`header${this.id}`);
+    const navElement = document.getElementById(`app-header`);
+    const onScroll = () => {
+      if (window.pageYOffset > 25) {
+        navElement.classList.add('animate-slideInDown');
+      } else {
+        navElement.classList.remove('animate-slideInDown');
+      }
+    };
 
-    window.addEventListener('scroll', this.throttle(this.onScroll, 100));
+    window.addEventListener('scroll', this.throttle(onScroll, 100));
   },
   methods: {
     throttle(cb, delay) {
@@ -68,14 +74,6 @@ export default {
           wait = false;
         }, delay);
       };
-    },
-    onScroll() {
-      console.log(window.pageYOffset);
-      if (window.pageYOffset > 25) {
-        this.navElement.classList.add('animate-slideInDown');
-      } else {
-        this.navElement.classList.remove('animate-slideInDown');
-      }
     }
   }
 };
