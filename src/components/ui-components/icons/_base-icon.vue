@@ -35,6 +35,12 @@ export default {
 };
 </script>
 
+<style>
+svg {
+  flex: 1;
+}
+</style>
+
 <style lang="scss" scoped>
 .icon {
   width: v-bind(size);
