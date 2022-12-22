@@ -10,21 +10,21 @@
 
         <p class="mt-4">
           <span class="flex items-center gap-2">
-            <img
+            <g-image
               src="@/assets/img/success.png"
               alt="checkmark"
               class="h-4 w-4"
             />Extensive integration support
           </span>
           <span class="flex items-center gap-2 mt-2">
-            <img
+            <g-image
               src="@/assets/img/success.png"
               alt="checkmark"
               class="h-4 w-4"
             />Compliance & risk experts
           </span>
           <span class="flex items-center gap-2 mt-2">
-            <img
+            <g-image
               src="@/assets/img/success.png"
               alt="checkmark"
               class="h-4 w-4"
@@ -38,11 +38,10 @@
       </div>
 
       <div class="flex-1 my-0">
-        <img
+        <g-image
           class="h-full relative right-0 max-w-600px 2xl:absolute"
           src="@/assets/img/woman-smiling.png"
           alt="woman smiling"
-          height="100%"
         />
       </div>
     </div>

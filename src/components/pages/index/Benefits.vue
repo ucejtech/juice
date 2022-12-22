@@ -10,7 +10,7 @@
           v-for="(benefit, index) in benefits"
           :key="index"
         >
-          <img :src="benefit.image" alt="Shield" width="88px" />
+          <g-image :src="benefit.image" alt="Shield" width="88px" />
           <h3 class="mt-6">
             {{ benefit.title }}
           </h3>

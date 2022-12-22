@@ -19,7 +19,7 @@ function addSvgResource(rule) {
     .loader('vue-svg-loader');
 }
 
-const siteName = 'Juice';
+const siteName = 'SpendJuice';
 
 module.exports = {
   siteName,

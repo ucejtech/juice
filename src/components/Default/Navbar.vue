@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :id="`header${id}`">
+  <header class="header animate-animated " :id="`header${id}`">
     <div class="content">
       <div class="logo">
         <JuiceLogo />
@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       id: generateRandomElementId(),
+      navElement: null,
       navLinks: [
         {
           title: 'Documentation',
@@ -48,15 +49,41 @@ export default {
     JuiceLogo
   },
   mounted() {
-    // const
+    this.navElement = document.getElementById(`header${this.id}`);
+
+    window.addEventListener('scroll', this.throttle(this.onScroll, 100));
   },
-  methods: {}
+  methods: {
+    throttle(cb, delay) {
+      let wait = false;
+
+      return (...args) => {
+        if (wait) {
+          return;
+        }
+
+        cb(...args);
+        wait = true;
+        setTimeout(() => {
+          wait = false;
+        }, delay);
+      };
+    },
+    onScroll() {
+      console.log(window.pageYOffset);
+      if (window.pageYOffset > 25) {
+        this.navElement.classList.add('animate-slideInDown');
+      } else {
+        this.navElement.classList.remove('animate-slideInDown');
+      }
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
-  @apply px-4 py-6 font-roobert sticky top-0 z-10;
+  @apply px-4 py-6 font-roobert z-10 transition-all sticky top-0;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.5) 0%,

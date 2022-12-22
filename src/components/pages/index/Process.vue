@@ -28,7 +28,7 @@
             efficiently and conveniently.
           </p>
         </div>
-        <img
+        <g-image
           src="@/assets/img/juice-dash.png"
           alt="Juice Dashboard"
           class="mt-8"
@@ -37,7 +37,7 @@
       </BaseWell>
       <div class="flex gap-6 mt-6 font-light">
         <BaseWell class="p-10 flex-1" color="#ffffff">
-          <img src="@/assets/img/shield.png" alt="Shield" width="88px" />
+          <g-image src="@/assets/img/shield.png" alt="Shield" width="88px" />
           <h3 class="mt-6">
             Security enabled
           </h3>
@@ -48,7 +48,11 @@
           </p>
         </BaseWell>
         <BaseWell class="p-10 flex-1" color="#ffffff">
-          <img src="@/assets/img/hand-currency.png" alt="Shield" width="88px" />
+          <g-image
+            src="@/assets/img/hand-currency.png"
+            alt="Shield"
+            width="88px"
+          />
           <h3 class="mt-6">Great pricing</h3>
           <p class="mt-4 text-lg">
             Especially valuable for businesses processing huge volumes at high
@@ -69,21 +73,21 @@
           </p>
           <p class="flex-1">
             <span class="flex items-center gap-2">
-              <img
+              <g-image
                 src="@/assets/img/success.png"
                 alt="checkmark"
                 class="h-4 w-4"
               />Transfer and settlement in minutes
             </span>
             <span class="flex items-center gap-2 mt-2">
-              <img
+              <g-image
                 src="@/assets/img/success.png"
                 alt="checkmark"
                 class="h-4 w-4"
               />No monthly or hidden fees
             </span>
             <span class="flex items-center gap-2 mt-2">
-              <img
+              <g-image
                 src="@/assets/img/success.png"
                 alt="checkmark"
                 class="h-4 w-4"

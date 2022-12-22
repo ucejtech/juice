@@ -11,6 +11,7 @@
     "gridsome": "^0.7.0"
   },
   "devDependencies": {
+    "@windicss/plugin-animations": "^1.0.9",
     "gridsome-plugin-windicss": "^1.0.7",
     "sass": "^1.57.0",
     "sass-loader": "^10.1.1",
