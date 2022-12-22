@@ -2,7 +2,9 @@
   <header class="header animate-animated " :id="`app-header`">
     <div class="content">
       <div class="logo">
-        <JuiceLogo />
+        <g-link to="/">
+          <JuiceLogo />
+        </g-link>
       </div>
       <div class="nav-links">
         <g-link class="route" v-for="(route, index) in navLinks" :key="index">
@@ -10,7 +12,7 @@
         </g-link>
       </div>
       <div class="contact">
-        <BaseButton outlined>Contact us</BaseButton>
+        <BaseButton outlined to="/contact">Contact us</BaseButton>
       </div>
     </div>
   </header>
@@ -99,7 +101,7 @@ export default {
     @apply flex gap-12 text-base;
 
     .route {
-      @apply hover:bg-purple-600;
+      @apply hover:text-purple-600;
     }
   }
 }

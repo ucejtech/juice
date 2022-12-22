@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="content">
       <div class="site-details flex gap-4 items-start">
-        <BaseButton icon width="32px" height="32px">
+        <BaseButton icon width="32px" height="32px" to="/">
           <BaseIcon icon="juice" size="8px" />
         </BaseButton>
         <p class="text-sm leading-8 max-w-44">

@@ -9,6 +9,8 @@
           color="#ffffff"
           v-for="(benefit, index) in benefits"
           :key="index"
+          data-aos="fade-up"
+          :data-aos-delay="200 + index * 15"
         >
           <g-image :src="benefit.image" alt="Shield" width="88px" />
           <h3 class="mt-6">
