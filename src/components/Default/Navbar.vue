@@ -24,7 +24,7 @@
         <BaseButton outlined to="/contact">Contact us</BaseButton>
       </div>
       <div
-        class="menu-control"
+        class="menu-control hidden <sm:block"
         :class="{ 'is--active': isMobileOpened }"
         @click="toggleMobileMenu"
       >
