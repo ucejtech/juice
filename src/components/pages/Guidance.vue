@@ -1,5 +1,5 @@
 <template>
-  <section class="documentation">
+  <section class="guidance" id="guidance">
     <div class="content">
       <div class="flex-1 py-12">
         <h2>All the guidance you’ll need</h2>
@@ -32,7 +32,7 @@
           </span>
         </p>
 
-        <BaseButton class="mt-8" color="white" to="/documentation">
+        <BaseButton class="mt-8" color="white" to="/contact">
           <span>Contact us</span>
         </BaseButton>
       </div>
@@ -53,7 +53,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.documentation {
+.guidance {
   @apply bg-black relative text-white h-full;
 
   .content {

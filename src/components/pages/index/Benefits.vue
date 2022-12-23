@@ -1,5 +1,5 @@
 <template>
-  <section class="benefits">
+  <section class="benefits" id="benefits">
     <div class="content">
       <h2>Benefits</h2>
       <p class="text-lg text-gray-700 mt-6 font-light">Why Juice</p>

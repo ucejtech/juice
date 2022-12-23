@@ -7,7 +7,12 @@
         </g-link>
       </div>
       <div class="nav-links">
-        <g-link class="route" v-for="(route, index) in navLinks" :key="index">
+        <g-link
+          class="route"
+          v-for="(route, index) in navLinks"
+          :key="index"
+          :to="route.link"
+        >
           {{ route.title }}
         </g-link>
       </div>
@@ -29,19 +34,19 @@ export default {
       navLinks: [
         {
           title: 'Documentation',
-          link: '/documentation'
+          link: '/#documentation'
         },
         {
           title: 'Benefits',
-          link: '/benefits'
+          link: '/#benefits'
         },
         {
           title: 'Use cases',
-          link: '/use-cases'
+          link: '/#use-cases'
         },
         {
           title: 'Guidance',
-          link: '/guidance'
+          link: '/#guidance'
         }
       ]
     };

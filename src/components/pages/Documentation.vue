@@ -1,5 +1,5 @@
 <template>
-  <section class="documentation">
+  <section class="documentation" id="documentation">
     <div class="content">
       <div class="flex-1 py-12">
         <h2>Higher levels of operational efficiency with our API suite</h2>

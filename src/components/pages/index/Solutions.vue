@@ -1,5 +1,5 @@
 <template>
-  <section class="solutions-section">
+  <section class="solutions-section" id="use-cases">
     <div class="content">
       <h2>
         Payment solutions for diverse use cases
@@ -21,7 +21,7 @@
             <p>
               {{ solution.desc }}
             </p>
-            <BaseButton class="mt-8"> Contact us</BaseButton>
+            <BaseButton class="mt-8" to="/contact"> Contact us</BaseButton>
           </template>
         </BaseCollapsible>
       </div>

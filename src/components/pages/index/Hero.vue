@@ -6,9 +6,14 @@
       Juice is an ecosystem of services making business cross border payment
       less complex, more reliable and compliant than ever before.
     </p>
-    <BaseButton class="contact-btn" data-aos="fade-up" data-aos-delay="300"
-      >Contact us</BaseButton
+    <BaseButton
+      class="contact-btn"
+      to="/contact"
+      data-aos="fade-up"
+      data-aos-delay="300"
     >
+      Contact us
+    </BaseButton>
     <div class="partners">
       <BaseIcon icon="rewire" size="48px" color="#434343" />
       <BaseIcon icon="flstudio" size="48px" color="#434343" />

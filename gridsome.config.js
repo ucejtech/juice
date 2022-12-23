@@ -30,8 +30,25 @@ module.exports = {
       options: {
         // see https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Terms',
+        path: './content/app/*.md'
+      }
     }
   ],
+  templates: {
+    Terms: [
+      {
+        path: (node) => {
+          return `/terms/${node.id}`;
+        },
+        component: './src/templates/Term.vue'
+      }
+    ]
+  },
   chainWebpack(config) {
     const svgRule = config.module.rule('svg');
     addSvgResource(svgRule);
