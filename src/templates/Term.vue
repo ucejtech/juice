@@ -3,6 +3,8 @@
     <div class="content">
       <h1>Terms & conditions</h1>
       <div class="mt-10" v-html="$page.term.content"></div>
+      This document was last updated on
+      {{ new Date($page.term.lastModified).toDateString() }}
     </div>
   </Layout>
 </template>
