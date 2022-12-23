@@ -82,8 +82,6 @@ export default {
         if (this.$route.fullPath !== this.to) this.$router.push(this.to);
       } else if (this.href) {
         window.location.href = this.href;
-      } else {
-        this.$emit('click');
       }
     }
   }

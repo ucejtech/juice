@@ -15,12 +15,14 @@
           settlement.
         </p>
       </BaseWell>
-      <BaseWell class="mt-6 p-10 pb-0">
+      <BaseWell class="mt-6 p-10 pb-0 <md:p-6 <md:pb-0">
         <h3 class="text-white">You’re in control</h3>
-        <div class="flex gap-6 text-white mt-4 tracking-0.37px font-light">
+        <div
+          class="flex gap-6 text-white mt-4 tracking-0.37px font-light <sm:flex-col <sm:gap-2"
+        >
           <p class="flex-1">
             One robust dashboard to manage all your finance operations within
-            our ecosystem
+            our ecosystem.
           </p>
           <p class="flex-1">
             With both top-level and indepth transaction history view on the
@@ -35,8 +37,8 @@
           data-aos="fade-up"
         />
       </BaseWell>
-      <div class="flex gap-6 mt-6 font-light">
-        <BaseWell class="p-10 flex-1" color="#ffffff">
+      <div class="flex gap-6 mt-6 font-light <md:flex-col">
+        <BaseWell class="p-10 flex-1 <md:p-6" color="#ffffff">
           <g-image src="@/assets/img/shield.png" alt="Shield" width="88px" />
           <h3 class="mt-6">
             Security enabled
@@ -47,7 +49,7 @@
             operational expenses associated with fraud investigations.
           </p>
         </BaseWell>
-        <BaseWell class="p-10 flex-1" color="#ffffff">
+        <BaseWell class="p-10 flex-1 <md:p-6" color="#ffffff">
           <g-image
             src="@/assets/img/hand-currency.png"
             alt="Shield"
@@ -61,11 +63,13 @@
           </p>
         </BaseWell>
       </div>
-      <BaseWell class="mt-6 p-10" color="black">
+      <BaseWell class="mt-6 p-10 <md:p-6" color="black">
         <h3 class="text-white max-w-400px">
           $50 for for all payin and payout transactions
         </h3>
-        <div class="flex gap-6 text-white mt-4 tracking-0.37px font-light">
+        <div
+          class="flex gap-6 text-white mt-4 tracking-0.37px font-light <md:flex-col"
+        >
           <p class="flex-1 ">
             Using Juice rails, cross border payments is simple. See your
             transfers settle as soon as the next business hour. We offer clear
@@ -107,7 +111,7 @@ export default {};
 <style lang="scss" scoped>
 .process-section {
   .content {
-    @apply my-0 mx-auto;
+    @apply my-0 mx-auto <lg:px-6;
     max-width: $contentMaxWidth;
 
     h2 {
@@ -115,11 +119,20 @@ export default {};
     }
 
     .settlements {
-      @apply mt-10 p-10 relative;
+      @apply mt-10 p-10 relative <md:p-6;
       background-image: url(../../../assets/img/netflix-bubble.png);
       background-repeat: no-repeat;
       background-position-x: right;
       background-size: contain;
+
+      @include breakpoint(800px, max) {
+        background-size: 50%;
+        background-position-y: bottom;
+      }
+
+      @include breakpoint(640px, max) {
+        background: white;
+      }
     }
   }
 }

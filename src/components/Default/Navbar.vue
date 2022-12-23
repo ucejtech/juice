@@ -1,5 +1,9 @@
 <template>
-  <header class="header animate-animated " :id="`app-header`">
+  <header
+    class="header animate-animated "
+    :id="`app-header`"
+    :class="{ 'mobile--opened': isMobileOpened }"
+  >
     <div class="content">
       <div class="logo">
         <g-link to="/">
@@ -18,6 +22,15 @@
       </div>
       <div class="contact">
         <BaseButton outlined to="/contact">Contact us</BaseButton>
+      </div>
+      <div
+        class="menu-control"
+        :class="{ 'is--active': isMobileOpened }"
+        @click="toggleMobileMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   </header>
@@ -48,11 +61,17 @@ export default {
           title: 'Guidance',
           link: '/#guidance'
         }
-      ]
+      ],
+      isMobileOpened: false
     };
   },
   components: {
     JuiceLogo
+  },
+  watch: {
+    $route() {
+      this.isMobileOpened = false;
+    }
   },
   mounted() {
     const navElement = document.getElementById(`app-header`);
@@ -81,6 +100,9 @@ export default {
           wait = false;
         }, delay);
       };
+    },
+    toggleMobileMenu() {
+      this.isMobileOpened = !this.isMobileOpened;
     }
   }
 };
@@ -94,7 +116,10 @@ export default {
     rgba(255, 255, 255, 0.5) 0%,
     rgba(255, 255, 255, 0.25) 100%
   );
-  backdrop-filter: blur(20px);
+
+  @include breakpoint(641px, min) {
+    backdrop-filter: blur(20px);
+  }
 
   .content {
     @apply flex justify-between items-center;
@@ -103,10 +128,66 @@ export default {
   }
 
   .nav-links {
-    @apply flex gap-12 text-base;
+    @apply flex gap-12 text-base <sm:hidden;
 
     .route {
-      @apply hover:text-purple-600;
+      @apply hover:text-purple-600 <sm:text-lg;
+    }
+  }
+
+  @include breakpoint(640px, max) {
+    &:not(.mobile--opened) {
+      backdrop-filter: blur(20px);
+    }
+    &.mobile--opened {
+      .nav-links {
+        @apply absolute flex flex-col top-0 -z-1 w-full h-screen left-0 gap-8 px-4 py-19 font-normal;
+        transition: all 0.3s ease-in-out;
+
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.5) 0%,
+          rgba(255, 255, 255, 0.25) 100%
+        );
+        backdrop-filter: blur(20px);
+      }
+    }
+  }
+
+  @include breakpoint(820px, max) {
+    .contact {
+      @apply hidden;
+    }
+  }
+
+  .menu-control {
+    @apply relative z-20;
+
+    &.is--active {
+      span {
+        &:first-child {
+          top: 0.438em;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          top: -0.313em;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    span {
+      @apply bg-black block;
+      display: block;
+      height: 0.133em;
+      margin-bottom: 0.25em;
+      position: relative;
+      top: 0;
+      transition: all 0.3s ease-in-out;
+      width: 1.25em;
     }
   }
 }

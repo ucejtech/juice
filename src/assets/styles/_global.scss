@@ -6,11 +6,15 @@ h3 {
   @apply font-bold;
 }
 h1 {
-  @apply text-56px leading-70px;
+  @apply <lg:text-40px <lg:leading-55px text-56px leading-70px;
 }
 h2 {
-  @apply text-40px leading-54px;
+  @apply text-40px leading-54px <lg:text-33px <lg:leading-42px;
 }
 h3 {
-  @apply text-28px leading-42px;
+  @apply text-28px leading-42px <md:text-23px <md:leading-33px;
+}
+
+.summary {
+  @apply text-lg leading-8 font-light;
 }

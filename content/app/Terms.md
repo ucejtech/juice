@@ -59,7 +59,7 @@ Juiice Increserves the right to change, suspend, or discontinue the Service (inc
 <br />
 
 **Scope of Juice Track’s Services**  
-Juiice Inc. is an elogistics technology company that provides a means for merchants to track their shipped goods in realtime.  
+Juice Inc. is an elogistics technology company that provides a means for merchants to track their shipped goods in realtime.  
 Our Services can be accessed through a web and mobile applications.  
 To access the Service, a User is required to sign up on the Platform and create an account (Juiice IncAccount) by providing the User’s name, email and password.  
 A User is granted access to use the Platform and has a responsibility to ensure that no third party shall gain access to the User’s account information.  

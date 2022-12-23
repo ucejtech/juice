@@ -4,7 +4,7 @@
       <h2>
         Payment solutions for diverse use cases
       </h2>
-      <p class="text-lg text-gray-700 mt-6 font-light">
+      <p class="summary text-gray-700 mt-6">
         Discover how we help some of Africa’s leading businesses
       </p>
       <div class="mt-4">
@@ -67,7 +67,7 @@ export default {
 <style lang="scss" scoped>
 .solutions-section {
   .content {
-    @apply my-0 mx-auto;
+    @apply my-0 mx-auto <lg:px-6;
     max-width: $contentMaxWidth;
 
     h2 {

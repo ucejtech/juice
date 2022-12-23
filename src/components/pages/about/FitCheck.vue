@@ -1,11 +1,12 @@
 <template>
-  <section class="guidance" id="guidance">
+  <section class="fitcheck">
     <div class="content">
       <div class="flex-1 py-12 <lg:p-6">
-        <h2>All the guidance you’ll need</h2>
-        <p class="text-white max-w-md summary mt-6">
-          Our team of experts provide guidance from inquiry to integration and
-          beyond. Get personalized recommendations for your business use case.
+        <h2>Do you think you’re a good fit?</h2>
+        <p class="text-white max-w-md text-lg leading-8 mt-6">
+          Even though we may not be looking for talents and the moment we are
+          open to any inquiries. Reach out to us and convince why we should work
+          toghether.
         </p>
 
         <p class="mt-4">
@@ -14,21 +15,21 @@
               src="@/assets/img/success.png"
               alt="checkmark"
               class="h-4 w-4"
-            />Extensive integration support
+            />Make sure your resume is attached
           </span>
           <span class="flex items-center gap-2 mt-2">
             <g-image
               src="@/assets/img/success.png"
               alt="checkmark"
               class="h-4 w-4"
-            />Compliance & risk experts
+            />We value skills the most
           </span>
           <span class="flex items-center gap-2 mt-2">
             <g-image
               src="@/assets/img/success.png"
               alt="checkmark"
               class="h-4 w-4"
-            />Dedicated product usecase workshop
+            />We’ll reply to every email regardless of the decision
           </span>
         </p>
 
@@ -39,7 +40,7 @@
 
       <div class="flex-1 my-0 media">
         <g-image
-          class="h-full relative right-0 max-w-550px 2xl:absolute  <lg:max-w-[50%] <md:max-w-400px"
+          class="h-full relative right-0 max-w-600px 2xl:absolute <lg:max-w-[50%] <md:max-w-400px"
           src="@/assets/img/woman-smiling.png"
           alt="woman smiling"
         />
@@ -53,7 +54,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.guidance {
+.fitcheck {
   @apply bg-black relative text-white h-full;
 
   .content {

@@ -44,10 +44,10 @@ export default {};
 
 <style lang="scss" scoped>
 .footer {
-  @apply bg-purple-200 p-16 font-light;
+  @apply bg-purple-200 py-16 font-light <lg:px-6 <md:py-12;
 
   .content {
-    @apply my-0 mx-auto grid grid-cols-4;
+    @apply my-0 mx-auto grid grid-cols-4 <lg:grid-cols-2 <md:gap-6 <sm:grid-cols-1;
     max-width: $contentMaxWidth;
   }
 

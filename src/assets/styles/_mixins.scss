@@ -1,0 +1,10 @@
+$breakpointType: (
+  min: 'min-width',
+  max: 'max-width'
+);
+
+@mixin breakpoint($val, $type) {
+  @media (#{$type}-width: #{$val}) {
+    @content;
+  }
+}

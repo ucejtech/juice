@@ -1,12 +1,16 @@
 <template>
   <article class="article">
     <figure class="article-media">
-      <g-image :src="image" alt="article image"></g-image>
+      <g-link :to="path">
+        <g-image :src="image" alt="article image" class="w-full"></g-image>
+      </g-link>
     </figure>
     <header class="mt-6">
-      <h3 class="text-2xl leading-38px">
-        {{ title }}
-      </h3>
+      <g-link :to="path">
+        <h3 class="">
+          {{ title }}
+        </h3>
+      </g-link>
       <p class="uppercase mt-2">
         <span class="category">{{ categories.join(' • ') }}</span>
       </p>
@@ -23,6 +27,9 @@ export default {
     title: {
       type: String
     },
+    path: {
+      type: String
+    },
     categories: {
       type: Array
     }
@@ -32,8 +39,9 @@ export default {
 
 <style lang="scss" scoped>
 .article {
-  @apply flex flex-col max-w-489px;
+  @apply flex flex-col max-w-489px <md:max-w-768px;
   &-media {
+    @apply w-full;
   }
 }
 </style>

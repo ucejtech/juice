@@ -2,10 +2,10 @@
   <section class="benefits" id="benefits">
     <div class="content">
       <h2>Benefits</h2>
-      <p class="text-lg text-gray-700 mt-6 font-light">Why Juice</p>
-      <div class="mt-10 grid grid-cols-2 gap-6">
+      <p class="summary text-gray-700 mt-6">Why Juice</p>
+      <div class="mt-10 grid grid-cols-2 gap-6 <md:grid-cols-1">
         <BaseWell
-          class="p-10 flex-1"
+          class="p-10 flex-1 <md:p-6"
           color="#ffffff"
           v-for="(benefit, index) in benefits"
           :key="index"
@@ -22,7 +22,7 @@
         </BaseWell>
       </div>
       <BaseWell color="black" class="mt-6 p-10 text-white">
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-3 <md:grid-cols-1 <md:gap-6">
           <div class="max-w-220px">
             <p class="value text-3xl font-bold">+70</p>
             <p class="description text-lg mt-4 font-light">
@@ -107,7 +107,7 @@ export default {
 
 <style lang="scss" scoped>
 .benefits {
-  @apply py-16;
+  @apply py-16 <lg:px-6;
   .content {
     @apply my-0 mx-auto;
     max-width: $contentMaxWidth;

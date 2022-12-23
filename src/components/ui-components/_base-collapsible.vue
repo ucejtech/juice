@@ -6,7 +6,7 @@
       { collapsible__static: isStatic }
     ]"
   >
-    <BaseWell color="#ffffff" class="p-10">
+    <BaseWell color="#ffffff" class="p-10 <md:p-6">
       <header
         class="flex justify-between cursor-pointer"
         :id="`trigger_${id}`"

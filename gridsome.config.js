@@ -5,7 +5,10 @@ function addStyleResource(rule) {
     .use('style-resource')
     .loader('style-resources-loader')
     .options({
-      patterns: [path.resolve(__dirname, './src/assets/styles/_global.scss')]
+      patterns: [
+        path.resolve(__dirname, './src/assets/styles/_global.scss'),
+        path.resolve(__dirname, './src/assets/styles/_mixins.scss')
+      ]
     });
 }
 

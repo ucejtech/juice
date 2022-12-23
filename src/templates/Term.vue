@@ -30,7 +30,7 @@ query($id: ID!) {
 <style lang="scss" scoped>
 .terms-page {
   .content {
-    @apply my-0 mx-auto py-16 text-lg font-light leading-38px;
+    @apply my-0 mx-auto py-16 text-lg font-light leading-38px <lg:px-6;
     max-width: $contentMaxWidth;
   }
 }

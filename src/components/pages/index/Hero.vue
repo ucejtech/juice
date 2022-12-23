@@ -1,8 +1,10 @@
 <template>
   <section class="hero">
-    <div class="bg" />
-    <h1 data-aos="fade-up">Everything you need for reliable global payments</h1>
-    <p class="summary" data-aos="fade-up" data-aos-delay="200">
+    <div class="bg <lg:hidden" />
+    <h1 data-aos="fade-up" class="<sm:text-left">
+      Everything you need for reliable global payments
+    </h1>
+    <p class="summary <sm:text-left" data-aos="fade-up" data-aos-delay="200">
       Juice is an ecosystem of services making business cross border payment
       less complex, more reliable and compliant than ever before.
     </p>
@@ -34,14 +36,14 @@ export default {};
 
 <style lang="scss" scoped>
 .hero {
-  @apply py-16 text-center flex items-center flex-col;
+  @apply py-16 text-center flex <sm:block items-center flex-col <lg:px-6;
 
   h1 {
     @apply max-w-660px;
   }
 
   .summary {
-    @apply font-normal text-lg max-w-660px mt-24px leading-8;
+    @apply max-w-660px mt-6 <sm:mt-4;
   }
 
   .contact-btn {
@@ -49,7 +51,7 @@ export default {};
   }
 
   .partners {
-    @apply flex gap-24 mt-14;
+    @apply flex justify-center gap-x-16 mt-14 lg:gap-24 <sm:flex-wrap <sm:gap-x-8 <sm:gap-y-6;
   }
 
   .bg {

@@ -1,9 +1,9 @@
 <template>
   <section class="documentation" id="documentation">
     <div class="content">
-      <div class="flex-1 py-12">
+      <div class="flex-1 py-12 <lg:p-6">
         <h2>Higher levels of operational efficiency with our API suite</h2>
-        <p class="text-white max-w-md text-lg leading-8 mt-6">
+        <p class="text-white max-w-md summary mt-6">
           Juice is an ecosystem of services making business cross border payment
           less complex, more reliable and compliant than ever before.
         </p>
@@ -38,9 +38,9 @@
         </BaseButton>
       </div>
 
-      <div class="flex-1 h-full my-0">
+      <div class="flex-1 h-full my-0 media">
         <g-image
-          class="h-full relative right-0 max-w-600px 2xl:absolute"
+          class="h-full relative right-0 max-w-550px 2xl:absolute <lg:max-w-[50%] <md:max-w-400px"
           src="@/assets/img/two-women-communicating.png"
           alt="two women communicating"
           quality="90"
@@ -64,6 +64,18 @@ export default {};
 
     h2 {
       @apply max-w-400px;
+    }
+
+    @include breakpoint(824px, max) {
+      @apply p-4 grid-cols-1;
+      .media {
+        @apply hidden;
+      }
+
+      h2,
+      .summary {
+        @apply max-w-full;
+      }
     }
   }
 }
